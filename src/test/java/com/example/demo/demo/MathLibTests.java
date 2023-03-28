@@ -10,5 +10,10 @@ public class MathLibTests {
     public void testEven1() {
         assertTrue(MathLib.isEven(2));
     }
+
+    @Test
+    public void testEven2() {
+        assertTrue(MathLib.isEven(3));
+    }
     
 }
