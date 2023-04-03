@@ -37,4 +37,10 @@ public class StringCalculatorTests {
         assertEquals(15, calculator.add("8, 7"));
     }
     
+    @Test
+    public void GreatherThanMax() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(2, calculator.add("1001, 2"));
+    }
+
 }
