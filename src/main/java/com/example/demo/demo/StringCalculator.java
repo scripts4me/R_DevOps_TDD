@@ -30,6 +30,10 @@ public class StringCalculator {
             valueAsInteger = 0;
         }
 
+        if (valueAsInteger < -1000) {
+            valueAsInteger = 0;
+        }
+
         return valueAsInteger;
 
     }
