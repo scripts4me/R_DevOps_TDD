@@ -55,4 +55,10 @@ public class StringCalculatorTests {
         assertEquals(5, calculator.add("2,,3"));
     }
 
+    @Test
+    public void OnlyAllowedDelimeter() {
+        StringCalculator calculator = new StringCalculator();
+        assertThrows(IllegalArgumentException.class, () -> calculator.add("2/3"));
+    }
+
 }
