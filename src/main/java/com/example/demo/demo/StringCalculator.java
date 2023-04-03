@@ -25,7 +25,13 @@ public class StringCalculator {
 
     private int addSingleToken(String token) {
         Integer valueAsInteger = Integer.parseInt(token);
+
+        if (valueAsInteger > 1000) {
+            valueAsInteger = 0;
+        }
+
         return valueAsInteger;
+
     }
 
 }
