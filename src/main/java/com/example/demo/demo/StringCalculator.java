@@ -6,7 +6,10 @@ public class StringCalculator {
         if (numbers == "") {
             return 0;
         } else {
-            String[] submittedNumbers = numbers.split(",");
+
+            String numbersWithoutSpace = numbers.replaceAll(" ", "");
+
+            String[] submittedNumbers = numbersWithoutSpace.split(",");
             int finalResult = calculateSum(submittedNumbers);
             return finalResult;
         }
