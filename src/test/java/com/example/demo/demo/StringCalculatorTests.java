@@ -24,5 +24,11 @@ public class StringCalculatorTests {
         assertEquals(7, calculator.add("7"));
     }
 
+
+    @Test
+    public void TwoInteger() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(15, calculator.add("8,7"));
+    }
     
 }
