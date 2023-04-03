@@ -8,6 +8,11 @@ public class StringCalculator {
         } else {
 
             String numbersWithoutSpace = numbers.replaceAll(" ", "");
+            Boolean OnlyAllowedDelimeter = numbersWithoutSpace.matches("^[0-9,-]*$");
+
+            if (!OnlyAllowedDelimeter) {
+                throw new IllegalArgumentException(String.format("Nur Kommas sind als Trennzeichen erlaubt."));
+            }
             String CleanedNumbersWithoutSpace = numbersWithoutSpace.replaceAll(",,", ",");
 
             String[] submittedNumbers = CleanedNumbersWithoutSpace.split(",");
