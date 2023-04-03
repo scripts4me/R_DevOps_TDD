@@ -16,6 +16,12 @@ public class StringCalculator {
             String CleanedNumbersWithoutSpace = numbersWithoutSpace.replaceAll(",,", ",");
 
             String[] submittedNumbers = CleanedNumbersWithoutSpace.split(",");
+
+            Integer MaxAmountOfNumbers = submittedNumbers.length;
+            if (MaxAmountOfNumbers > 5) {
+                throw new IllegalArgumentException(String.format("Es sind nur maximal 5 Nummern erlaubt."));
+            }
+
             int finalResult = calculateSum(submittedNumbers);
             return finalResult;
         }
