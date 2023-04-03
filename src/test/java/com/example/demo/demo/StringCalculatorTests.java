@@ -1,14 +1,15 @@
 package com.example.demo.demo;
 
-import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StringCalculatorTests {
 
     @Test
     public void OneInteger() {
         StringCalculator calculator = new StringCalculator();
-        Assert.assertEqual("5", calculator.add(5));
+        assertEquals(5,calculator.add("5"));
+
     }
     
 }
