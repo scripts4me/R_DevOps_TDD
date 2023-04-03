@@ -8,8 +8,9 @@ public class StringCalculator {
         } else {
 
             String numbersWithoutSpace = numbers.replaceAll(" ", "");
+            String CleanedNumbersWithoutSpace = numbersWithoutSpace.replaceAll(",,", ",");
 
-            String[] submittedNumbers = numbersWithoutSpace.split(",");
+            String[] submittedNumbers = CleanedNumbersWithoutSpace.split(",");
             int finalResult = calculateSum(submittedNumbers);
             return finalResult;
         }
