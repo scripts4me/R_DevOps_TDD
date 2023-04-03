@@ -61,4 +61,10 @@ public class StringCalculatorTests {
         assertThrows(IllegalArgumentException.class, () -> calculator.add("2/3"));
     }
 
+    @Test
+    public void MaxAmountOfNumbers() {
+        StringCalculator calculator = new StringCalculator();
+        assertThrows(IllegalArgumentException.class, () -> calculator.add("2,3,6, 7, 8 ,9"));
+    }
+
 }
