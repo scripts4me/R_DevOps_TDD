@@ -49,4 +49,10 @@ public class StringCalculatorTests {
         assertEquals(2, calculator.add("-1002, 2"));
     }
 
+    @Test
+    public void DoubleComma() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(5, calculator.add("2,,3"));
+    }
+
 }
