@@ -30,5 +30,11 @@ public class StringCalculatorTests {
         StringCalculator calculator = new StringCalculator();
         assertEquals(15, calculator.add("8,7"));
     }
+
+    @Test
+    public void TwoIntegerWithSpace() {
+        StringCalculator calculator = new StringCalculator();
+        assertEquals(15, calculator.add("8, 7"));
+    }
     
 }
